@@ -4,7 +4,6 @@ const secondHand = document.querySelector(".second");
 
 const updateClock = () => {
   const currentDate = new Date();
-  setInterval(updateClock, 1000);
   const hour = currentDate.getHours();
   const minute = currentDate.getMinutes();
   const second = currentDate.getSeconds();
@@ -20,4 +19,4 @@ const updateClock = () => {
   secondHand.style.transform = `rotate(${secondDeg}deg)`;
 };
 
-updateClock();
+setInterval(updateClock, 1000);
